@@ -1,0 +1,54 @@
+name: MountsPlugin
+version: '1.0.0'
+main: ru.mounts.plugin.MountsPlugin
+api-version: '1.21'
+author: YourName
+description: >
+  Плагин призыва личного приручённого животного (лошадь/осёл/верблюд) с выдачей седла.
+  Ездить на призванном животном может только тот, кто его призвал.
+
+commands:
+  horse:
+    description: Призывает приручённую лошадь, привязанную только к вам
+    usage: /horse
+    permission: mounts.horse
+    permission-message: '§cУ вас нет прав на эту команду.'
+  donkey:
+    description: Призывает приручённого осла, привязанного только к вам
+    usage: /donkey
+    permission: mounts.donkey
+    permission-message: '§cУ вас нет прав на эту команду.'
+  camel:
+    description: Призывает приручённого верблюда, привязанного только к вам
+    usage: /camel
+    permission: mounts.camel
+    permission-message: '§cУ вас нет прав на эту команду.'
+  cdhorse:
+    description: Устанавливает кулдаун (в секундах) для команды /horse
+    usage: /cdhorse <секунды>
+    permission: mounts.admin
+    permission-message: '§cУ вас нет прав на эту команду.'
+  cddonkey:
+    description: Устанавливает кулдаун (в секундах) для команды /donkey
+    usage: /cddonkey <секунды>
+    permission: mounts.admin
+    permission-message: '§cУ вас нет прав на эту команду.'
+  cdcamel:
+    description: Устанавливает кулдаун (в секундах) для команды /camel
+    usage: /cdcamel <секунды>
+    permission: mounts.admin
+    permission-message: '§cУ вас нет прав на эту команду.'
+
+permissions:
+  mounts.horse:
+    description: Позволяет призывать лошадь
+    default: true
+  mounts.donkey:
+    description: Позволяет призывать осла
+    default: true
+  mounts.camel:
+    description: Позволяет призывать верблюда
+    default: true
+  mounts.admin:
+    description: Позволяет менять кулдауны команд призыва животных (/cdhorse, /cddonkey, /cdcamel)
+    default: true

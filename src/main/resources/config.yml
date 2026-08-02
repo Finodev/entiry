@@ -1,0 +1,4 @@
+cooldown-seconds:
+  horse: 300
+  donkey: 300
+  camel: 300
